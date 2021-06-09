@@ -24,9 +24,9 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/stefanrusek/dotfiles.git
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/Code/dotfiles
 dotfiles_files:
   - .zshrc
   - .gitignore
@@ -62,6 +62,11 @@ homebrew_installed_packages:
   - wget
   - wrk
   - zsh-history-substring-search
+  - youtube-dl
+  - qemu
+  - dart
+  - fastlane
+  - groovy
 
 homebrew_taps:
   - homebrew/core
@@ -81,6 +86,17 @@ homebrew_cask_apps:
   - sublime-text
   - transmit
   - vagrant
+  - powershell
+  - 1password
+  - adobe-creative-cloud
+  - android-studio
+  - audacity
+  - babeledit
+  - brave-browser
+  - microsoft-edge
+  - jetbrains-toolbox
+  - minecraft
+  - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -96,15 +112,24 @@ composer_packages: []
 # - name: drush
 #   state: present # present/absent, default: present
 #   version: "^8.1" # default: N/A
-gem_packages: []
+gem_packages:
+  - name: cocoapods
+  - 
 # - name: bundler
 #   state: present # present/absent/latest, default: present
 #   version: "~> 1.15.1" # default: N/A
-npm_packages: []
+npm_packages:
+  - name: @angular/cli
+  - name: firebase-tools
+  - name: ng
+  
 # - name: webpack
 #   state: present # present/absent/latest, default: present
 #   version: "^2.6" # default: N/A
-pip_packages: []
+pip_packages: 
+  - name: boto
+  - name: youtube-dlc
+  
 # - name: mkdocs
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
