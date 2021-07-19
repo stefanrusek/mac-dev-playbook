@@ -170,3 +170,4 @@ sublime_package_control:
 post_provision_tasks:
   - "tasks/flutter.yml"
   - "tasks/mackup.yml"
+  - "tasks/keys.yml"

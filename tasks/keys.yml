@@ -1,0 +1,4 @@
+---
+# setup private keys
+- name: Restore keys
+  command: gpg --import ~/Dropbox/Private/githubkey.asc
