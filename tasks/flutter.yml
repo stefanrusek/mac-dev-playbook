@@ -1,0 +1,30 @@
+---
+# Flutter
+- name: Make ~/Code dir
+  file:
+    path: ~/Code
+    state: directory
+
+- name: Download flutter
+  git:
+    repo: https://github.com/flutter/flutter.git
+    dest: ~/Code/flutter
+    update: false
+    version: stable
+
+- name: Build Flutter Cache
+  command: bin/flutter precache
+  args:
+    chdir: ~/Code/flutter
+    creates: ~/Code/flutter/bin/cache
+
+- name: Update Flutter
+  command: bin/flutter upgrade
+  args:
+    chdir: ~/Code/flutter
+
+- name: Add flutter dir to system-wide $PATH.
+  become: true
+  copy:
+    dest: /etc/profile.d/flutter-path.sh
+    content: 'PATH=$PATH:~/Code/flutter/bin'

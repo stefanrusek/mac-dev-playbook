@@ -1,0 +1,14 @@
+---
+# setup private keys
+- name: Make .mackup/
+  file:
+    path: ~/.mackup
+    state: directory
+
+- name: Copy mackup config
+  copy:
+    src: files/mackup/*
+    dest: ~/.mackup/
+
+- name: Mackup restore
+  command: mackup restore
