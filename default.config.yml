@@ -78,6 +78,10 @@ homebrew_cask_apps:
   - docker
   - handbrake
   - licecap
+<<<<<<< HEAD
+=======
+  - sequel-ace
+>>>>>>> e99bbe90425d03dbb0f08fdaa30cbda3ccd17abd
   - slack
   - sublime-text
   - transmit
