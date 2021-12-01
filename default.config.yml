@@ -2,7 +2,7 @@
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: true
-configure_terminal: true
+configure_terminal: false
 configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
@@ -25,6 +25,7 @@ sudoers_custom_config: ''
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
 dotfiles_repo: https://github.com/stefanrusek/dotfiles.git
+dotfiles_repo_version: main
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Code/dotfiles
 dotfiles_files:
@@ -51,7 +52,6 @@ homebrew_installed_packages:
   - sqlite
   - mcrypt
   - nmap
-  - node
   - nvm
   - php
   - ssh-copy-id
@@ -60,7 +60,6 @@ homebrew_installed_packages:
   - openssl
   - pv
   - wget
-  - wrk
   - zsh-history-substring-search
   - youtube-dl
   - qemu
@@ -68,6 +67,7 @@ homebrew_installed_packages:
   - groovy
   - yamllint
   - mackup
+  - rvm
 
 homebrew_taps:
   - homebrew/core
@@ -75,26 +75,17 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
   - docker
-  - dropbox
-  - firefox
-  - google-chrome
   - handbrake
   - licecap
-  - sequel-pro
   - slack
   - sublime-text
   - transmit
-  - vagrant
-  - powershell
-  - 1password
   - adobe-creative-cloud
   - android-studio
   - audacity
   - babeledit
   - brave-browser
-  - microsoft-edge
   - jetbrains-toolbox
   - minecraft
   - zoom
@@ -125,9 +116,8 @@ composer_packages: []
 # - name: drush
 #   state: present # present/absent, default: present
 #   version: "^8.1" # default: N/A
-gem_packages:
-  - name: cocoapods
-  - 
+gem_packages: []
+
 # - name: bundler
 #   state: present # present/absent/latest, default: present
 #   version: "~> 1.15.1" # default: N/A
@@ -149,7 +139,7 @@ pip_packages:
 #   version: "0.16.3" # default: N/A
 
 # Set to 'true' to configure Sublime Text.
-configure_sublime: false
+configure_sublime: true
 sublime_base_path: '~/Library/Application Support/Sublime Text'
 sublime_config_path: "Packages/User"
 sublime_package_control:
